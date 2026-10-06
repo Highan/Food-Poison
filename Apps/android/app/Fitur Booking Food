@@ -1,0 +1,9 @@
+apps/mobile/lib/
+├── providers/
+│   └── booking_provider.dart    ← STATE MANAGEMENT
+├── repositories/
+│   └── booking_repository.dart  ← FIREBASE/API
+├── screens/
+│   └── booking_screen.dart      ← UI
+└── widgets/
+    └── booking_form.dart        ← FORM + VALIDATION
