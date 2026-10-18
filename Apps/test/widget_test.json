@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:food_poison/screens/booking_screen.dart';
+
+void main() {
+  group('BookingScreen Widget Test', () {
+    testWidgets('menampilkan loading state', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: BookingScreen(),
+        ),
+      );
+
+      expect(
+        find.byType(CircularProgressIndicator),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('menampilkan success state', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: BookingScreen(),
+        ),
+      );
+
+      await tester.pumpAndSettle();
+
+      expect(
+        find.text('Nasi Ayam'),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('menampilkan empty state', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: BookingScreen(),
+        ),
+      );
+
+      await tester.pumpAndSettle();
+
+      expect(
+        find.text('Belum ada booking'),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('menampilkan error state', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: BookingScreen(),
+        ),
+      );
+
+      await tester.pumpAndSettle();
+
+      expect(
+        find.text('Gagal mengambil data'),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('menampilkan tombol Retry', (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: BookingScreen(),
+        ),
+      );
+
+      await tester.pumpAndSettle();
+
+      expect(
+        find.text('Retry'),
+        findsOneWidget,
+      );
+
+      await tester.tap(find.text('Retry'));
+      await tester.pump();
+    });
+  });
+}
