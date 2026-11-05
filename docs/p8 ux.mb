@@ -1,0 +1,147 @@
+LAPORAN UI/UX APLIKASI FOOD POISON
+
+1. Pendahuluan
+
+Food Poison merupakan aplikasi yang dirancang untuk membantu mengurangi pemborosan makanan (*food waste*) dengan menghubungkan merchant atau penjual makanan dengan pengguna yang ingin membeli makanan surplus dengan harga lebih terjangkau.
+
+Dalam pengembangan aplikasi, aspek User Interface (UI) dan User Experience (UX) menjadi bagian penting agar aplikasi mudah digunakan, memiliki tampilan yang konsisten, dan memberikan respons yang jelas terhadap setiap tindakan pengguna.
+
+2. Tujuan UI/UX
+
+Tujuan penerapan UI/UX pada aplikasi Food Poison adalah:
+
+1. Membuat tampilan aplikasi sederhana dan mudah dipahami.
+2. Memudahkan pengguna mencari dan melihat informasi makanan.
+3. Mempermudah proses pemesanan makanan.
+4. Membuat aplikasi dapat digunakan pada berbagai ukuran layar.
+5. Memberikan informasi ketika proses sedang berlangsung, berhasil, atau mengalami kesalahan.
+6. Memastikan setiap komponen dapat digunakan dengan mudah oleh berbagai pengguna.
+
+## 3. Implementasi User Interface (UI)
+
+UI merupakan bagian visual aplikasi yang berinteraksi langsung dengan pengguna.
+
+Implementasi UI pada Food Poison meliputi:
+
+3.1 Halaman Login
+
+Halaman login digunakan pengguna untuk masuk ke aplikasi dengan memasukkan email dan password.
+
+Komponen:
+- Input email.
+- Input password.
+- Tombol Login.
+- Informasi validasi apabila data tidak sesuai.
+
+3.2 Halaman Dashboard
+
+Dashboard merupakan halaman utama yang menampilkan informasi makanan surplus.
+
+Komponen:
+- App Bar.
+- Daftar makanan.
+- Gambar makanan.
+- Nama makanan.
+- Harga normal dan harga diskon.
+- Informasi merchant.
+- Tombol untuk melihat detail makanan.
+
+### 3.3 Halaman Detail Makanan
+
+Halaman detail digunakan untuk melihat informasi makanan yang dipilih.
+
+Komponen:
+- Gambar makanan.
+- Nama dan deskripsi makanan.
+- Harga makanan.
+- Informasi merchant.
+- Kuota makanan.
+- Tombol Booking.
+
+3.4 Halaman Profile
+
+Halaman profile digunakan untuk melihat dan mengubah informasi pengguna.
+
+Komponen:
+- Nama pengguna.
+- Email pengguna.
+- Form edit profile.
+- Tombol simpan perubahan.
+- Pesan validasi dan status penyimpanan.
+
+4. Implementasi User Experience (UX)
+
+UX berfokus pada pengalaman pengguna ketika menggunakan aplikasi Food Poison.
+
+4.1 Adaptive Layout
+
+Aplikasi menerapkan layout responsif agar dapat menyesuaikan ukuran layar perangkat.
+
+- Layar kecil: konten ditampilkan secara vertikal.
+- Layar besar: konten dapat ditampilkan dalam beberapa kolom.
+- Penggunaan `LayoutBuilder` untuk mendeteksi ukuran layar.
+- Penggunaan `SafeArea` agar konten tidak tertutup area sistem perangkat
+
+4.2 Keyboard-Safe UI
+
+Ketika pengguna mengisi form, tampilan harus tetap dapat digunakan meskipun keyboard muncul.
+
+Implementasi:
+- Menggunakan `SingleChildScrollView`.
+- Menggunakan `resizeToAvoidBottomInset`.
+- Memanfaatkan `MediaQuery.viewInsets.bottom`.
+- Memastikan tombol dan input tetap dapat dijangkau.
+
+### 4.3 Accessibility
+
+Aplikasi memperhatikan kemudahan penggunaan bagi pengguna dengan kebutuhan aksesibilitas.
+
+Implementasi:
+- Memberikan label pada input.
+- Menggunakan ukuran teks yang mudah dibaca.
+- Memastikan kontras warna cukup jelas.
+- Memberikan label semantik pada tombol dan gambar.
+- Menyediakan area sentuh tombol yang memadai.
+
+4.4 Action Feedback
+
+Setiap tindakan pengguna harus memberikan respons yang jelas.
+
+Contoh:
+- Loading: menampilkan indikator ketika proses login atau booking berlangsung.
+- Success: menampilkan pesan ketika booking berhasil.
+- Error: menampilkan pesan ketika proses gagal.
+- Validation: menampilkan pesan jika input belum sesuai.
+
+5. Pengujian UI/UX
+
+Pengujian dilakukan untuk memastikan aplikasi dapat digunakan dengan baik.
+
+| No. | Skenario Pengujian | Hasil yang Diharapkan |
+
+| 1 | Membuka aplikasi pada layar kecil | Layout tetap rapi |
+| 2 | Membuka aplikasi pada layar besar | Konten menyesuaikan ukuran layar |
+| 3 | Membuka keyboard saat mengisi form | Input tetap dapat diakses |
+| 4 | Mengisi form dengan data kosong | Pesan validasi muncul |
+| 5 | Menekan tombol Booking | Indikator loading muncul |
+| 6 | Booking berhasil | Pesan sukses ditampilkan |
+| 7 | Booking gagal | Pesan error ditampilkan |
+
+## 6. Dokumentasi Screenshot
+
+Screenshot berikut perlu diambil ketika aplikasi sedang dijalankan.
+
+1. **Small Screen:** Tampilan aplikasi pada layar smartphone berukuran kecil.
+2. **Large Screen:** Tampilan aplikasi pada layar besar atau tablet.
+3. **Keyboard Open:** Tampilan form ketika keyboard sedang terbuka.
+4. **Action Feedback:** Tampilan loading, success, atau error ketika pengguna melakukan tindakan.
+
+
+
+7. Kesimpulan
+
+Penerapan UI/UX pada aplikasi Food Poison bertujuan untuk menciptakan aplikasi yang mudah digunakan, responsif, dan memberikan pengalaman yang baik kepada pengguna.
+
+Melalui penerapan Adaptive Layout, Keyboard-Safe UI, Accessibility, dan Action Feedback, aplikasi diharapkan dapat digunakan pada berbagai perangkat serta memberikan informasi yang jelas dalam setiap proses.
+
+Pengujian UI/UX dilakukan untuk memastikan seluruh komponen berjalan sesuai kebutuhan dan tidak membingungkan pengguna.
