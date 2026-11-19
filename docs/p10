@@ -1,0 +1,34 @@
+P10: Runtime Logging, APK, & Bug Fix dari Review Food Poison
+
+1. Pendahuluan
+
+Pada pertemuan P10, dilakukan proses peningkatan kualitas dan stabilitas aplikasi Food Poison. Kegiatan meliputi penerapan runtime logging, perbaikan bug berdasarkan hasil review, pengujian ulang fitur, serta pembuatan APK Android.
+
+2. Runtime Logging
+
+Runtime logging diterapkan untuk membantu developer memantau aktivitas aplikasi ketika dijalankan. Log digunakan untuk mencatat proses penting seperti login, booking, pengambilan data, serta error yang terjadi.
+
+Logging membantu proses debugging karena developer dapat mengetahui lokasi dan penyebab kesalahan tanpa harus menebak masalah.
+
+3. Bug Fix dari Review
+
+Perbaikan dilakukan berdasarkan hasil review aplikasi. Bug yang menjadi fokus antara lain validasi input, duplikasi booking, error loading, navigasi, penyimpanan data, dan penanganan error.
+
+Setiap bug diperbaiki kemudian diuji kembali untuk memastikan fitur berjalan sesuai kebutuhan.
+
+4. Testing
+
+Pengujian dilakukan menggunakan Flutter Analyze, Flutter Test, dan pengujian langsung pada emulator atau perangkat Android.
+
+Pengujian mencakup fitur login, dashboard, katalog makanan, detail makanan, booking, order, validasi, serta penanganan error.
+
+ 5. Build APK
+
+Aplikasi dibangun menggunakan Flutter dengan perintah:
+
+`flutter build apk --debug`
+
+APK digunakan untuk menguji aplikasi pada perangkat Android secara langsung.
+
+6. Kesimpulan
+Pada P10 dilakukan peningkatan kualitas aplikasi Food Poison melalui runtime logging, bug fixing, testing, dan pembuatan APK. Tahapan ini bertujuan memastikan aplikasi lebih stabil, mudah di-debug, serta siap melanjutkan proses Release Candidate.
